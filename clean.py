@@ -3,6 +3,21 @@ import sys
 import logging
 import pandas as pd
 
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter(
+        '[%(asctime)s] [%(process)d] [%(name)s] [%(levelname)s] '
+        '{%(funcName)s:%(lineno)d} %(message)s')
+
+file_handler = logging.FileHandler('error.log')
+file_handler.setLevel(logging.ERROR)
+file_handler.setFormatter(formatter)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
+
 
 
 def normalize_to_unicode(text, encoding="utf-8"):
