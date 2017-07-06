@@ -1,5 +1,9 @@
 import os
 import sys
+import logging
+import pandas as pd
+
+
 
 def normalize_to_unicode(text, encoding="utf-8"):
     if sys.version_info.major == 2:
@@ -63,7 +67,7 @@ def load_files(filename):
             try:
                 out.append(normalize_to_unicode(line).strip())
             except UnicodeDecodeError:
-                print("Broken line: {}".format(line))
+                logger.exception('Broken line: {}'.format(line))
     return out
 
 def pandas_dataframe(filename):
@@ -74,4 +78,6 @@ if __name__ == '__main__':
     load_dataset('google_asr_dataset.csv')
     load_dataset('ibm_asr_dataset.csv')
     load_dataset('ms_asr_dataset.csv')
- 
+    logging.info('Cleaning of files done: {}')
+    logger = logging.getLogger(__name__)
+    file_handler = logging.FileHandler('a')

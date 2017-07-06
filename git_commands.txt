@@ -1,0 +1,51 @@
+Goto directory to save the repository...
+
+1. cd /directory/
+
+2. git clone <url> .      #clone to the current directory 
+
+3. git remote -v #list information to repository 
+
+4. git branch -a #list all of the branches in the repository locally and remotly
+
+5. git diff #shows changes in file 
+
+6. git add -A # add file with the changes in the staging 
+
+7. git status # show the status of the files in the git directory
+
+8. git commit -m "comment on changes" # commit changes in the files locally
+
+9. git pull origin master # git pull does it pulls any changes that have been made last time pulled 
+from the repository
+
+10.git push origin master # push the changes made to the master branch in the remote repository
+
+11. git branch <name of the branch> # create branches for the code
+
+12. git checkout <branch name> # change the working branch name. default branch is master.
+
+13. git branch # show the branch you are working on
+
+14. git push -u origin <branch name> # push the changes to current branch.
+
+15. git branch -a #get all branches names.
+
+16. git merge <branch name> # merge with master
+
+17. git branch --merged # shows the branches that have been merged with the master
+
+18. git push origin master #push changes from local to remote repo
+
+19. git branch -d <branch name> # delete branch locally.
+
+20. git push origin --delete <branch name> # delete branch on remote repo.
+
+
+
+# After making changes execute the following commands.
+  7.
+  6.
+  8. 
+  10.
+
