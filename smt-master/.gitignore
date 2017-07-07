@@ -1,0 +1,6 @@
+smt.egg-info/
+*.pyc
+terminal.py
+twitter
+jec_basic_sentence
+test/:test:
