@@ -74,13 +74,14 @@ def load_files(filename):
     return out
 
 def pandas_dataframe(filename):
-    return pd.DataFrame.from_csv(filename)
+    return pd.DataFrame.from_csv(filename, sep=',' , encoding='utf-8')
 
 if __name__ == '__main__':
-    load_dataset('manual_dataset.csv')
-    load_dataset('google_asr_dataset.csv')
-    load_dataset('ibm_asr_dataset.csv')
-    load_dataset('ms_asr_dataset.csv')
+    #load_dataset('manual_dataset.csv')
+    #load_dataset('google_asr_dataset.csv')
+    #load_dataset('ibm_asr_dataset.csv')
+    #load_dataset('ms_asr_dataset.csv')
+    load_dataset('911.csv')
     logging.info('Cleaning Done........')
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
