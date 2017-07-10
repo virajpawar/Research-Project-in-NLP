@@ -177,12 +177,14 @@ N = int(len(data) * 0.1)
 print(N)
 
 #labels = list({a['Class'] for a in data})
-
+train.Text
 
 y_train, y_test = train.Class, test.Class
     
-vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.5,
-                                 stop_words='english')
+vectorizer = TfidfVectorizer(sublinear_tf=True, 
+                             max_features = 100, 
+                             max_df=0.5,
+                             stop_words='english')
 X_train = vectorizer.fit_transform(train.Text)
 X_test = vectorizer.fit_transform(test.Text)
 def benchmark(clf):
